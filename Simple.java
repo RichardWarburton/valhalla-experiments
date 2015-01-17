@@ -38,10 +38,21 @@ class Simple {
         }
     }
 
-    public static <any T> void fail(T[] values) {
-        T value = values[0];
-        value.toString();
+    static interface Consumer<any T> {
+        public void accept(T arg);
     }
+
+
+    // Another compiler error case:
+    /*
+    public static <any T> void fail(T[] values) {
+        get(values).toString();
+    }
+
+    public static <any T> T get(T[] values) {
+        return values[0];
+    }
+    */
 
 /*
     public static <any T> T second(Iterable<T> it) {
