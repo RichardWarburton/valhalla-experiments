@@ -11,7 +11,7 @@ public class ArrayList<any T> {
         values = new T[INITIAL_SIZE];
     }
 
-    public void add(T value) {
+    public void addd(T value) {
         ensureCapacity(position + 2);
         values[position++] = value;
     }
