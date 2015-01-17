@@ -38,6 +38,11 @@ class Simple {
         }
     }
 
+    public static <any T> void fail(T[] values) {
+        T value = values[0];
+        value.toString();
+    }
+
 /*
     public static <any T> T second(Iterable<T> it) {
         return it.iterator().next().next();
